@@ -13,7 +13,7 @@
 | Población del estudio | 269.320 créditos castigados (*Charged Off*, incluidos los 761 castigados fuera de política); se excluyen los 40 en estado *Default* |
 | Base del análisis | 196.403 créditos tras la ventana de maduración de 15 meses; 196.364 en la base de ajuste |
 
-## Paso 3. Inventario de datos: disponibilidad, calidad y brechas
+## Inventario de datos: disponibilidad, calidad y brechas
 
 Una fila por variable que el análisis necesita, incluidas las que no están disponibles. Los porcentajes de faltantes se calculan sobre los 269.320 créditos castigados.
 
