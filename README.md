@@ -3,8 +3,19 @@
 **Equipo:** Daira Julieth Campos V., María Camila Cárdenas C. y Alejandro José Medina C.
 **Cursos:** Estadística Bayesiana y Pensamiento Crítico en Ciencia de Datos 2, Universidad Externado de Colombia, 2026-2.
 
-## De qué trata el proyecto
 
+## Abrir los cuadernos en Google Colab
+
+| Cuaderno | Abrir |
+|---|---|
+| Cuaderno principal | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/mariacamilacc1/LGD-Happen-Bank/blob/main/Proyecto_LGD_NotebookFinal.ipynb) |
+| Ventana de maduración | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/mariacamilacc1/LGD-Happen-Bank/blob/main/Proyecto_LGD_VentanaMaduracion.ipynb) |
+| Exploratorio: recuperación con regresión bayesiana | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/mariacamilacc1/LGD-Happen-Bank/blob/main/Exploratorio_Reformulacion_RecuperacionBayesiana.ipynb) |
+| Exploratorio: recuperación con LightGBM | [![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/mariacamilacc1/LGD-Happen-Bank/blob/main/Exploratorio_Recuperacion_LightGBM.ipynb) |
+
+Al abrir, ir a **Entorno de ejecución → Ejecutar todas**.
+
+## Sobre el proyecto.
 El proyecto analiza cuánto pierde Happen Bank (antes LendingClub) cuando un crédito cae en default, medido como la proporción del monto prestado que no se recupera (LGD). Con una regresión bayesiana estima cómo cambia la pérdida según la calificación de riesgo, el plazo, el propósito, el monto, el ingreso y la relación deuda/ingreso del crédito, con intervalos que expresan la incertidumbre de cada estimación.
 
 La decisión que busca mejorar es la **priorización de la cobranza**: si la unidad de cobranza solo puede atender el 20 % de los créditos castigados, a cuáles dedicarles el esfuerzo primero.
@@ -58,9 +69,29 @@ Con las demás características iguales, los créditos de calificación G pierde
 ## Cómo reproducir
 
 1. Abrir cualquiera de los cuadernos en Google Colab y ejecutar todas las celdas en orden (**Entorno de ejecución → Ejecutar todas**).
-2. El cuaderno obtiene la base automáticamente, en este orden: la copia versionada en el Drive del equipo, la copia publicada en el Release `v1.0-avance3` de este repositorio (cualquier persona puede usarla) o, si ninguna está disponible, el archivo original en Kaggle. En todos los casos verifica la huella SHA-256 y que se carguen las 2.260.701 filas.
+2. El cuaderno obtiene la base automáticamente: usa la copia versionada en el Drive del equipo o, si no tiene acceso, la descarga del Release v1.0-avance3 de este repositorio. En los dos casos verifica la huella SHA-256 y que se carguen las 2.260.701 filas.
 3. La semilla fija (2026) garantiza que el muestreo de Gibbs y el bootstrap den las mismas cifras.
 4. `Proyecto_LGD_VersionadoBase.ipynb` solo se necesita para regenerar la copia versionada a partir del archivo de Kaggle.
+
+## Librerías
+## Librerías
+
+Los cuadernos se ejecutaron en Google Colab con Python 3.13.18 y estas versiones (9 de noviembre de 2026):
+
+| Librería | Versión | Para qué se usa |
+|---|---|---|
+| pandas | 2.2.3 | Cargar y manipular la base |
+| pyarrow | 23.0.1 | Leer la copia versionada en formato Parquet |
+| numpy | 2.4.6 | Cálculos numéricos y muestreo de Gibbs |
+| matplotlib | 3.10.0 | Gráficas |
+| seaborn | 0.13.2 | Gráficas del análisis exploratorio |
+| scipy | 1.16.3 | Distribuciones de las priors y estadística |
+| scikit-learn | 1.6.1 | Pipeline, validación cruzada y línea base |
+| lightgbm | 4.6.0 | Modelo de recuperación (solo `Exploratorio_Recuperacion_LightGBM`) |
+
+En Colab ya vienen instaladas. Fuera de Colab se instalan con:
+
+    pip install pandas==2.2.3 pyarrow==23.0.1 numpy==2.4.6 matplotlib==3.10.0 seaborn==0.13.2 scipy==1.16.3 scikit-learn==1.6.1 lightgbm==4.6.0 kagglehub==1.0.3
 
 ## Referencias
 
