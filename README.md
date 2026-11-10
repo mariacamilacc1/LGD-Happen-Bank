@@ -107,4 +107,6 @@ IFRS Foundation. (s. f.). *IFRS 9 Financial Instruments*. https://www.ifrs.org/i
 
 LendingClub Corporation. (2025). *Annual report on Form 10-K for the fiscal year ended December 31, 2024*. U.S. Securities and Exchange Commission. https://www.sec.gov/Archives/edgar/data/1409970/000140997025000009/lc-20241231.htm
 
+Milliken, M. (2024). LendingClub review. Debt.org. https://www.debt.org/credit/loans/personal/lending-club-review/?utm
+
 Zhou, G., Zhang, Y., & Luo, S. (2018). P2P network lending, loss given default and credit risks. *Sustainability, 10*(4), 1010. https://doi.org/10.3390/su10041010
