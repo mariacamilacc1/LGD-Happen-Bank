@@ -6,14 +6,15 @@
 |---|---|
 | Conjunto de datos | *All Lending Club loan data* (George, 2019), Kaggle |
 | Archivo | `accepted_2007_to_2018Q4.csv.gz` (créditos aceptados) |
-| Descarga | Directa al cuaderno con `kagglehub`, con control de integridad: si se cargan menos de 2 millones de filas, el cuaderno se detiene |
+| Licencia | CC0: Public Domain (George, 2019) |
+| Descarga | Los cuadernos usan la copia versionada (Google Drive del equipo o Release `v1.0-avance3` de GitHub) y, si no está disponible, descargan de Kaggle con `kagglehub`. Verifican la huella SHA-256 y que se carguen 2.260.701 filas (ver `Versionado_Base_Datos.md`) |
 | Filas del archivo | 2.260.701 (33 son filas de resumen y se eliminan) |
 | Periodo de originación | 2007–2018 |
 | Fecha de corte | Marzo de 2019 (último pago registrado en la base) |
 | Población del estudio | 269.320 créditos castigados (*Charged Off*, incluidos los 761 castigados fuera de política); se excluyen los 40 en estado *Default* |
 | Base del análisis | 196.403 créditos tras la ventana de maduración de 15 meses; 196.364 en la base de ajuste |
 
-## Inventario de datos: disponibilidad, calidad y brechas
+## Paso 3. Inventario de datos: disponibilidad, calidad y brechas
 
 Una fila por variable que el análisis necesita, incluidas las que no están disponibles. Los porcentajes de faltantes se calculan sobre los 269.320 créditos castigados.
 
@@ -26,7 +27,7 @@ Una fila por variable que el análisis necesita, incluidas las que no están dis
 | Recuperaciones posteriores | `recuperacion` | Sí | `recoveries` | 2007–2018 | 0 % | Recuperaciones tardías no registradas en los años recientes (censura del target) | No (posterior) | Excluir el registro |
 | Costo de cobranza | `comision` | Sí | `collection_recovery_fee` | 2007–2018 | 0 % | Mismo problema de censura | No (posterior) | Excluir o usar LGD bruta |
 | Estado del préstamo | `estado` | Sí | `loan_status` | 2007–2018 | 0 % | Hay varias etiquetas de pérdida | Define el default | Excluir el registro |
-| Tasa de interés | `tasa` | Sí | `int_rate` | 2007–2018 | 0 % | Rango 5,31–30,99 %; se asigna según la calificación, por eso es colineal con grade | Sí (originación) | Excluir el registro. No entra al modelo por multicolinealidad (VIF de 9,7) |
+| Tasa de interés | `tasa` | Sí | `int_rate` | 2007–2018 | 0 % | Rango 5,31–30,99 %; el autor del conjunto quitó el símbolo % y la convirtió a número; se asigna según la calificación, por eso es colineal con grade | Sí (originación) | Excluir el registro. No entra al modelo por multicolinealidad (VIF de 9,7) |
 | Ingreso anual | `ingreso` | Sí | `annual_inc` | 2007–2018 | 0 % | 68 registros con ingreso 0 (no permiten el logaritmo) y valores extremos (máx. 9.500.000) | Sí (autodeclarado en la solicitud) | Excluir del ajuste los registros con ingreso 0 |
 | Relación deuda/ingreso | `dti` | Sí | `dti` | 2007–2018 | 0,026 % (71 registros) | 143 registros con dti > 100 (máx. 999, atípicos) | Sí (originación) | Excluir del ajuste los faltantes y los valores mayores a 100 |
 | Calificación de riesgo | `calificacion` | Sí | `grade` | 2007–2018 | 0 % | 7 categorías (A–G); G tiene solo 4.632 casos (1,7 %) | Sí (originación) | Excluir el registro |

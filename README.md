@@ -1,17 +1,19 @@
 # Análisis de la severidad de la pérdida (LGD) y su asociación con las características de los créditos en default de Happen Bank (LendingClub, 2007–2018)
 
-**Equipo:** Daira Julieth Campos V, María Camila Cárdenas C. y Alejandro José Medina C.
+**Equipo:** Daira Julieth Campos V., María Camila Cárdenas C. y Alejandro José Medina C.
 **Cursos:** Estadística Bayesiana y Pensamiento Crítico en Ciencia de Datos 2, Universidad Externado de Colombia, 2026-2.
+
+## De qué trata el proyecto
 
 El proyecto analiza cuánto pierde Happen Bank (antes LendingClub) cuando un crédito cae en default, medido como la proporción del monto prestado que no se recupera (LGD). Con una regresión bayesiana estima cómo cambia la pérdida según la calificación de riesgo, el plazo, el propósito, el monto, el ingreso y la relación deuda/ingreso del crédito, con intervalos que expresan la incertidumbre de cada estimación.
 
-La decisión que busca mejorar es la priorización de la cobranza, si la unidad de cobranza del banco solo puede atender el 20 % de los créditos castigados, a cuáles es debido darles atención prioritaria.
+La decisión que busca mejorar es la **priorización de la cobranza**: si la unidad de cobranza solo puede atender el 20 % de los créditos castigados, a cuáles dedicarles el esfuerzo primero.
 
 **Pregunta:** ¿Cómo puede el banco mejorar la priorización de los créditos en default estimando la severidad de sus pérdidas?
 
 ## Datos
 
-- **Fuente:** *All Lending Club loan data* (George, 2019), en Kaggle (Fecha de recuperación: 26 de Octubre de 2026).
+- **Fuente:** *All Lending Club loan data* (George, 2019), en Kaggle, con licencia CC0: Public Domain. La copia exacta que usa el proyecto, descargada el 26 de octubre de 2026, está publicada en el Release [`v1.0-avance3`](https://github.com/mariacamilacc1/LGD-Happen-Bank/releases/tag/v1.0-avance3), con su huella SHA-256 en [Versionado de la Base de Datos](Versionado_Base_Datos.md).
 - **Población:** 269.320 créditos castigados originados entre 2007 y 2018.
 - **Base del análisis:** 196.403 créditos cuya recuperación ya terminó (ventana de maduración de 15 meses desde el default).
 - **Partición temporal:** entrenamiento con 2007–2014 (75.175 créditos) y prueba con 2015 (64.846 créditos); 2016–2017 no se usan por ser cohortes incompletas.
@@ -53,11 +55,12 @@ Con las demás características iguales, los créditos de calificación G pierde
 | `Exploratorio_Reformulacion_RecuperacionBayesiana.ipynb` | Exploratorio: modelo de la recuperación con regresión bayesiana |
 | `Exploratorio_Recuperacion_LightGBM.ipynb` | Exploratorio: orden por saldo × (1 − recuperación predicha) con LightGBM |
 
-## Reproducibilidad de este repositorio.
+## Cómo reproducir
 
-1. **Una sola vez:** Correr `Proyecto_LGD_VersionadoBase.ipynb`, que guarda en Google Drive (`MyDrive/LGD_Base_Versionada/`) una copia fija de la base descargada originalmente el 26 de octubre de 2026, con su huella SHA-256.
-2. Abrir cualquiera de los cuadernos en Google Colab y ejecutar todas las celdas en orden (**Entorno de ejecución → Ejecutar todas**). Cada cuaderno carga la copia versionada desde Drive; si no la encuentra, descarga la base desde Kaggle con `kagglehub`. En los dos casos verifica que se carguen las 2.260.701 filas.
+1. Abrir cualquiera de los cuadernos en Google Colab y ejecutar todas las celdas en orden (**Entorno de ejecución → Ejecutar todas**).
+2. El cuaderno obtiene la base automáticamente, en este orden: la copia versionada en el Drive del equipo, la copia publicada en el Release `v1.0-avance3` de este repositorio (cualquier persona puede usarla) o, si ninguna está disponible, el archivo original en Kaggle. En todos los casos verifica la huella SHA-256 y que se carguen las 2.260.701 filas.
 3. La semilla fija (2026) garantiza que el muestreo de Gibbs y el bootstrap den las mismas cifras.
+4. `Proyecto_LGD_VersionadoBase.ipynb` solo se necesita para regenerar la copia versionada a partir del archivo de Kaggle.
 
 ## Referencias
 
