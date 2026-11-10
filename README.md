@@ -103,6 +103,8 @@ George, N. (2019). *All Lending Club loan data* [Conjunto de datos]. Kaggle. htt
 
 Happen Bank. (s. f.). *What do the different Note statuses mean?* Recuperado el 9 de noviembre de 2026, de https://www.happen.com/help/investing-faq/what-do-the-different-note-statuses-mean
 
+Hurlin, C., Leymarie, J., & Patin, A. (2018). Loss functions for Loss Given Default model comparison. European Journal of Operational Research, 268(1), 348–360. https://doi.org/10.1016/j.ejor.2018.01.020
+
 IFRS Foundation. (s. f.). *IFRS 9 Financial Instruments*. https://www.ifrs.org/issued-standards/list-of-standards/ifrs-9-financial-instruments/
 
 LendingClub Corporation. (2025). *Annual report on Form 10-K for the fiscal year ended December 31, 2024*. U.S. Securities and Exchange Commission. https://www.sec.gov/Archives/edgar/data/1409970/000140997025000009/lc-20241231.htm
