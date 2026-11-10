@@ -99,8 +99,6 @@ Basel Committee on Banking Supervision. (2022). *IRB approach: Minimum requireme
 
 BBVA. (2025). *Pillar 3 2024*. U.S. Securities and Exchange Commission. https://www.sec.gov/Archives/edgar/data/842180/000084218025000016/pillar3report2024sec.htm
 
-EALDE Business School. (s.f.). ¿Qué es el Comité de Basilea y cuáles son sus objetivos? EALDE Business School. https://www.ealde.es/comite-de-basilea/
-
 George, N. (2019). *All Lending Club loan data* [Conjunto de datos]. Kaggle. https://www.kaggle.com/datasets/wordsforthewise/lending-club
 
 Happen Bank. (s. f.). *What do the different Note statuses mean?* Recuperado el 9 de noviembre de 2026, de https://www.happen.com/help/investing-faq/what-do-the-different-note-statuses-mean
