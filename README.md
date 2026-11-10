@@ -1,6 +1,8 @@
 # Análisis de la severidad de la pérdida (LGD) y su asociación con las características de los créditos en default de Happen Bank (LendingClub, 2007–2018)
 
-**Equipo:** Daira Julieth Campos V., María Camila Cárdenas C. y Alejandro José Medina C.
+ **Equipo:** Daira Julieth Campos V. ([@Dairacampos](https://github.com/Dairacampos)), María Camila Cárdenas C. ([@mariacamilacc1](https://github.com/mariacamilacc1)) y Alejandro José Medina C. ([@usuario_alejandro](https://github.com/usuario_alejandro)).
+
+
 **Cursos:** Estadística Bayesiana y Pensamiento Crítico en Ciencia de Datos 2, Universidad Externado de Colombia, 2026-2.
 
 
