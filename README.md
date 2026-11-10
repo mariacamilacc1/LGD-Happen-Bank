@@ -76,8 +76,6 @@ Con las demás características iguales, los créditos de calificación G pierde
 4. `Proyecto_LGD_VersionadoBase.ipynb` solo se necesita para regenerar la copia versionada a partir del archivo de Kaggle.
 
 ## Librerías
-## Librerías
-
 Los cuadernos se ejecutaron en Google Colab con Python 3.13.18 y estas versiones (9 de noviembre de 2026):
 
 | Librería | Versión | Para qué se usa |
