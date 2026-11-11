@@ -67,6 +67,7 @@ Con las demás características iguales, los créditos de calificación G pierde
 | `Analisis_Exploratorio.md` | Alternativas probadas después del resultado, que no cambian el dictamen |
 | `Exploratorio_Reformulacion_RecuperacionBayesiana.ipynb` | Exploratorio: modelo de la recuperación con regresión bayesiana |
 | `Exploratorio_Recuperacion_LightGBM.ipynb` | Exploratorio: orden por saldo × (1 − recuperación predicha) con LightGBM |
+| `Tarjeta_Modelo.md` | Tarjeta del modelo (Mitchell et al., 2019): uso previsto, métricas, resultados, consideraciones éticas y advertencias |
 
 ## Cómo reproducir
 
